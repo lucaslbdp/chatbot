@@ -1,8 +1,8 @@
 module.exports = {
   //Facebook App credentials
-  FB_PAGE_TOKEN: "EAALmS1FgAYUBAMCSV1Iffy792bWGHBhu6lQB6dbQgj2hsKpUp0LV2KJ5LYsU1OkjK5d1jaeFPPOoVsfJjLjbzic5dOpmKwKkcHlao4VJmXTHqXvZCIfvD3ZBXodb3XGbaKC3XYiQZAOZAPZBn3nPFNoUM2GoCy8CkPiZBCvulUGwZDZD",
-  FB_VERIFY_TOKEN: "vendedorwhatson",
-  FB_APP_SECRET: "373014584411ec512e6b121234940c01",
+  FB_PAGE_TOKEN: "EAAMZCrDqZCHeoBAAeAVxNzkR1YIVAnaYg1zmoOUe0kjCjk775qmD6qhUqzNTsc7pDLvvXBsydF0wCgtQKQw5WFMakhRRTP9lce9xg9sC1sA62alsZBAapq61VE1iz6AbahAailoyhN9glbtaP87zqtNIzjKtegmn6ai1SwiPQZDZD",
+  FB_VERIFY_TOKEN: "vendedorBotWhats",
+  FB_APP_SECRET: "41d563048816e040ac8b4ff47a654928",
   //Google project credentials
   GOOGLE_PROJECT_ID: "primerintento-ceol",
   DF_LANGUAGE_CODE: "es",
