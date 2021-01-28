@@ -153,16 +153,16 @@ async function handleDialogFlowAction(
 ) {
   switch (action) {
     case "code.DemasElementos.Action":
-      sendTextMessage(sender, "Estoy mandando una img y un boton");
-      sendImageMessage(
+      await sendTextMessage(sender, "Estoy mandando una img y un boton");
+      await sendImageMessage(
         sender,
         "https://i.pinimg.com/originals/88/62/a5/8862a5503943877a73f17cbf46bfda7d.jpg"
       );
-      sendButtonMessage(sender, "Ejemplo de boton", [
+      await sendButtonMessage(sender, "Ejemplo de boton", [
         {
           type: "web_url",
           url: "https://www.messenger.com",
-          title: "Visit Messenger",
+          title: "ejemplo de boton",
         },
       ]);
       break;
