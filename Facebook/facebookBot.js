@@ -153,20 +153,17 @@ async function handleDialogFlowAction(
 ) {
   switch (action) {
     case "Codigo.QuickReplay.action":
-      sendQuickReply(sender, "ejemplo de quick replay", [
-        {
-          title: "Si",
+      let replies = [];
+      for (let i = 1; i <= 5; i++) {
+        replies.push({
+          title: i,
           content_type: "text",
           payload: "siAcepto",
-          image_url: "https://i.pinimg.com/736x/20/74/20/207420ade450e1893b3719390cc78398.jpg"
-        },
-        {
-          content_type: "text",
-          payload: "<POSTBACK_PAYLOAD>",
-          image_url: "https://www.vhv.rs/dpng/d/15-158810_red-x-check-box-hd-png-download.png",
-          title: "No"
-        }
-      ]);
+          image_url:
+            "https://i.pinimg.com/736x/20/74/20/207420ade450e1893b3719390cc78398.jpg",
+        });
+      }
+      sendQuickReply(sender, "ejemplo de quick replay", replies);
       break;
     default:
       //unhandled action, just send back the text
