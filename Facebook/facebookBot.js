@@ -152,6 +152,55 @@ async function handleDialogFlowAction(
   parameters
 ) {
   switch (action) {
+    case "code.MenuCarrusel.action":
+      let helados = [
+        {
+          id: 1,
+          nombre: "helado de frutilla",
+          img:
+            "https://www.todoinfantil.com/img/recetas/Helado%20de%20frutillas.jpg",
+          descripcion: "los helados de frutilla son muy ricos",
+          precio: 80,
+        },
+        {
+          id: 2,
+          nombre: "helado de chocolate",
+          img:
+            "https://okdiario.com/img/2020/01/24/receta-de-helado-de-chocolate-y-canela.jpg",
+          descripcion: "los helados de chocolate son muy ricos",
+          precio: 80,
+        },
+        {
+          id: 3,
+          nombre: "helado de granizado",
+          img:
+            "https://www.argentina.gridohelado.com/wp-content/uploads/2016/04/granizados.jpg",
+          descripcion: "los helados de granizado son muy ricos",
+          precio: 80,
+        },
+      ];
+      let tarjetas = [];
+      helados.forEach((helado) => {
+        tarjetas.push({
+          title: helado.nombre + " $" + helado.precio,
+          image_url: helado.img,
+          subtitle: helado.descripcion,
+          buttons: [
+            {
+              type: "postback",
+              title: "Hacer compra",
+              payload: "hacerCompra",
+            },
+            {
+              type: "postback",
+              title: "Ver más helados",
+              payload: "verMasHelados",
+            },
+          ],
+        });
+      });
+      sendGenericMessage(sender, tarjetas);
+      break;
     case "Codigo.QuickReplay.action":
       let replies = [];
       for (let i = 1; i <= 5; i++) {
