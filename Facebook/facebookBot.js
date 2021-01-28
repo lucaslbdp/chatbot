@@ -152,6 +152,22 @@ async function handleDialogFlowAction(
   parameters
 ) {
   switch (action) {
+    case "Codigo.QuickReplay.action":
+      sendQuickReply(sender, "ejemplo de quick replay", [
+        {
+          title: "Si",
+          content_type: "text",
+          payload: "siAcepto",
+          image_url: "https://i.pinimg.com/736x/20/74/20/207420ade450e1893b3719390cc78398.jpg"
+        },
+        {
+          content_type: "text",
+          payload: "<POSTBACK_PAYLOAD>",
+          image_url: "https://www.vhv.rs/dpng/d/15-158810_red-x-check-box-hd-png-download.png",
+          title: "No"
+        }
+      ]);
+      break;
     default:
       //unhandled action, just send back the text
       handleMessages(messages, sender);
