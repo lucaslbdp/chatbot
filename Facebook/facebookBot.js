@@ -34,6 +34,7 @@ if (!config.FB_APP_SECRET) {
   throw new Error("missing FB_APP_SECRET");
 }
 
+sendTextMessage(3791340914290782, "todo bien y vos");
 const sessionIds = new Map();
 
 // for Facebook verification
