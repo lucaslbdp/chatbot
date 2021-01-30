@@ -24,8 +24,8 @@ mongoose.connect('mongodb+srv://lucas:dev2020@dialogflowcluster.nlhma.mongodb.ne
   useUnifiedTopology: true,
   useFindAndModify: false,
   useCreateIndex: true
-},(err,res)=>{
-  if(err) return console.log("hay un error en la db", err);
+}, (err, res) => {
+  if (err) return console.log("hay un error en la db", err);
   console.log("todo bien");
 }
 );
