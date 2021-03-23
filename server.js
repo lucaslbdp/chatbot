@@ -31,6 +31,8 @@ mongoose.connect('mongodb+srv://lucas:dev2020@dialogflowcluster.nlhma.mongodb.ne
 );
 
 app.use("/messenger", require("./Facebook/facebookBot"));
+app.use("/api", require("./routes/api"))
+
 
 app.get("/", (req, res) => {
   return res.send("Chatbot Funcionando 🤖🤖🤖");
